@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Thin</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IotaTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pv-fM-F1g">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ab1-Hw-qqR" userLabel="Currency Picker">
+                                        <rect key="frame" x="0.0" y="435" width="375" height="162"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="162" id="r3J-ui-umc"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="1pv-fM-F1g" id="2qU-w5-x3t"/>
+                                            <outlet property="delegate" destination="1pv-fM-F1g" id="jtL-qI-xSX"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcW-1u-Xdn" userLabel="IOTA Price label">
+                                        <rect key="frame" x="25" y="170" width="325" height="58"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="49"/>
+                                        <color key="textColor" red="0.26454603672027588" green="0.79036468267440796" blue="0.74301189184188843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlK-ec-amR" userLabel="IOTA image View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IOTA" translatesAutoresizingMaskIntoConstraints="NO" id="5be-57-LmQ">
+                                                <rect key="frame" x="141" y="39" width="92" height="92"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="044-Pw-pag"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HO-NA-Rv5">
+                                        <rect key="frame" x="164.5" y="309" width="46" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="course" translatesAutoresizingMaskIntoConstraints="NO" id="Nia-dh-wRj">
+                                        <rect key="frame" x="172" y="271" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="K4Y-yA-u0W"/>
+                                            <constraint firstAttribute="width" constant="30" id="RsJ-s9-yq1"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97603648900985718" green="0.98827081918716431" blue="0.99233657121658325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="hcW-1u-Xdn" firstAttribute="leading" secondItem="1pv-fM-F1g" secondAttribute="leading" constant="25" id="1js-xh-plu"/>
+                                    <constraint firstItem="NlK-ec-amR" firstAttribute="leading" secondItem="1pv-fM-F1g" secondAttribute="leading" id="7rH-T1-4gy"/>
+                                    <constraint firstAttribute="trailing" secondItem="NlK-ec-amR" secondAttribute="trailing" id="9es-Yb-PSw"/>
+                                    <constraint firstItem="9HO-NA-Rv5" firstAttribute="top" secondItem="Nia-dh-wRj" secondAttribute="bottom" constant="8" id="BOo-Bw-bHm"/>
+                                    <constraint firstItem="ab1-Hw-qqR" firstAttribute="leading" secondItem="1pv-fM-F1g" secondAttribute="leading" id="JVb-PN-sZq"/>
+                                    <constraint firstItem="9HO-NA-Rv5" firstAttribute="centerY" secondItem="1pv-fM-F1g" secondAttribute="centerY" id="TQJ-py-Ivz"/>
+                                    <constraint firstItem="Nia-dh-wRj" firstAttribute="leading" secondItem="1pv-fM-F1g" secondAttribute="leading" constant="172" id="YDa-BE-Dg0"/>
+                                    <constraint firstItem="9HO-NA-Rv5" firstAttribute="centerX" secondItem="1pv-fM-F1g" secondAttribute="centerX" id="Zho-Ei-1zw"/>
+                                    <constraint firstItem="hcW-1u-Xdn" firstAttribute="top" secondItem="NlK-ec-amR" secondAttribute="bottom" id="d5z-2A-6W2"/>
+                                    <constraint firstItem="NlK-ec-amR" firstAttribute="top" secondItem="1pv-fM-F1g" secondAttribute="top" id="enS-mh-la8"/>
+                                    <constraint firstAttribute="trailing" secondItem="ab1-Hw-qqR" secondAttribute="trailing" id="lOU-9Y-NyK"/>
+                                    <constraint firstAttribute="bottom" secondItem="ab1-Hw-qqR" secondAttribute="bottom" constant="50" id="qa8-cw-LqL"/>
+                                    <constraint firstAttribute="trailing" secondItem="hcW-1u-Xdn" secondAttribute="trailing" constant="25" id="zqD-83-9zg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nia-dh-wRj" secondAttribute="trailing" constant="173" id="zvX-Xf-Ndj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1pv-fM-F1g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Aew-hY-lS5"/>
+                            <constraint firstItem="1pv-fM-F1g" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Hvo-A9-y6l"/>
+                            <constraint firstItem="1pv-fM-F1g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LyU-ud-gE4"/>
+                            <constraint firstItem="1pv-fM-F1g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g3c-jZ-6OH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="courseLabe" destination="9HO-NA-Rv5" id="V1Y-aO-emd"/>
+                        <outlet property="currencyPicker" destination="ab1-Hw-qqR" id="G3A-Vo-ROO"/>
+                        <outlet property="priceLabel" destination="hcW-1u-Xdn" id="3On-z0-bo2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IOTA" width="300" height="300"/>
+        <image name="course" width="392" height="332"/>
+    </resources>
+</document>
