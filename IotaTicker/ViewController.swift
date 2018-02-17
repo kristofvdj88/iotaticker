@@ -22,6 +22,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
     @IBOutlet weak var courseLabe: UILabel!
+    @IBOutlet weak var courseImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +91,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 courseLabe.textColor = UIColor.green
             } else {
                 courseLabe.textColor = UIColor.red
+                courseImage.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI))
+                courseImage.transform = CGAffineTransform(scaleX: -1, y: 1)
             }
             courseLabe.text = courseResult
         } else {

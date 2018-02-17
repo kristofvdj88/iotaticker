@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
         <array key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-Thin</string>
         </array>
@@ -26,77 +29,101 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pv-fM-F1g">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ab1-Hw-qqR" userLabel="Currency Picker">
-                                        <rect key="frame" x="0.0" y="435" width="375" height="162"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlK-ec-amR" userLabel="IOTA image View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IOTA" translatesAutoresizingMaskIntoConstraints="NO" id="5be-57-LmQ">
+                                                <rect key="frame" x="127" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="RM0-Re-l3P"/>
+                                                    <constraint firstAttribute="height" constant="120" id="an1-KV-IaX"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="162" id="r3J-ui-umc"/>
+                                            <constraint firstAttribute="height" constant="120" id="Fjt-pE-0WH"/>
+                                            <constraint firstItem="5be-57-LmQ" firstAttribute="centerY" secondItem="NlK-ec-amR" secondAttribute="centerY" id="Qy7-Qe-Ua0"/>
+                                            <constraint firstItem="5be-57-LmQ" firstAttribute="centerX" secondItem="NlK-ec-amR" secondAttribute="centerX" id="Ykd-ph-U6F"/>
+                                        </constraints>
+                                    </view>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ab1-Hw-qqR" userLabel="Currency Picker">
+                                        <rect key="frame" x="0.0" y="507" width="375" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="T7d-kS-NmN"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="dataSource" destination="1pv-fM-F1g" id="2qU-w5-x3t"/>
                                             <outlet property="delegate" destination="1pv-fM-F1g" id="jtL-qI-xSX"/>
                                         </connections>
                                     </pickerView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMo-TV-7zB" userLabel="Center View">
+                                        <rect key="frame" x="116" y="283" width="143" height="81"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="course" translatesAutoresizingMaskIntoConstraints="NO" id="Nia-dh-wRj">
+                                                <rect key="frame" x="49.5" y="18" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="TX7-Jk-v8M"/>
+                                                    <constraint firstAttribute="width" constant="44" id="wv5-Pw-jR2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HO-NA-Rv5">
+                                                <rect key="frame" x="49.5" y="18" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="lJY-gF-Af9"/>
+                                                    <constraint firstAttribute="height" constant="44" id="naY-Ok-vE6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9HO-NA-Rv5" firstAttribute="centerX" secondItem="mMo-TV-7zB" secondAttribute="centerX" id="3oi-N7-h1M"/>
+                                            <constraint firstItem="Nia-dh-wRj" firstAttribute="centerX" secondItem="mMo-TV-7zB" secondAttribute="centerX" id="7vR-dK-CL1"/>
+                                            <constraint firstItem="9HO-NA-Rv5" firstAttribute="centerY" secondItem="mMo-TV-7zB" secondAttribute="centerY" id="7ze-P6-se1"/>
+                                            <constraint firstAttribute="height" constant="81" id="8K1-ak-pRA"/>
+                                            <constraint firstItem="Nia-dh-wRj" firstAttribute="centerY" secondItem="mMo-TV-7zB" secondAttribute="centerY" id="OGh-pY-bx3"/>
+                                            <constraint firstAttribute="width" constant="143" id="owg-wN-9nQ"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcW-1u-Xdn" userLabel="IOTA Price label">
-                                        <rect key="frame" x="25" y="170" width="325" height="58"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="49"/>
+                                        <rect key="frame" x="37.5" y="120" width="300" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="9fm-aG-Cg2"/>
+                                            <constraint firstAttribute="height" constant="58" id="MdY-G7-7hF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="38"/>
                                         <color key="textColor" red="0.26454603672027588" green="0.79036468267440796" blue="0.74301189184188843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlK-ec-amR" userLabel="IOTA image View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IOTA" translatesAutoresizingMaskIntoConstraints="NO" id="5be-57-LmQ">
-                                                <rect key="frame" x="141" y="39" width="92" height="92"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="170" id="044-Pw-pag"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 h" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HO-NA-Rv5">
-                                        <rect key="frame" x="164.5" y="309" width="46" height="28.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="course" translatesAutoresizingMaskIntoConstraints="NO" id="Nia-dh-wRj">
-                                        <rect key="frame" x="172" y="271" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="K4Y-yA-u0W"/>
-                                            <constraint firstAttribute="width" constant="30" id="RsJ-s9-yq1"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97603648900985718" green="0.98827081918716431" blue="0.99233657121658325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="hcW-1u-Xdn" firstAttribute="leading" secondItem="1pv-fM-F1g" secondAttribute="leading" constant="25" id="1js-xh-plu"/>
-                                    <constraint firstItem="NlK-ec-amR" firstAttribute="leading" secondItem="1pv-fM-F1g" secondAttribute="leading" id="7rH-T1-4gy"/>
-                                    <constraint firstAttribute="trailing" secondItem="NlK-ec-amR" secondAttribute="trailing" id="9es-Yb-PSw"/>
-                                    <constraint firstItem="9HO-NA-Rv5" firstAttribute="top" secondItem="Nia-dh-wRj" secondAttribute="bottom" constant="8" id="BOo-Bw-bHm"/>
-                                    <constraint firstItem="ab1-Hw-qqR" firstAttribute="leading" secondItem="1pv-fM-F1g" secondAttribute="leading" id="JVb-PN-sZq"/>
-                                    <constraint firstItem="9HO-NA-Rv5" firstAttribute="centerY" secondItem="1pv-fM-F1g" secondAttribute="centerY" id="TQJ-py-Ivz"/>
-                                    <constraint firstItem="Nia-dh-wRj" firstAttribute="leading" secondItem="1pv-fM-F1g" secondAttribute="leading" constant="172" id="YDa-BE-Dg0"/>
-                                    <constraint firstItem="9HO-NA-Rv5" firstAttribute="centerX" secondItem="1pv-fM-F1g" secondAttribute="centerX" id="Zho-Ei-1zw"/>
-                                    <constraint firstItem="hcW-1u-Xdn" firstAttribute="top" secondItem="NlK-ec-amR" secondAttribute="bottom" id="d5z-2A-6W2"/>
-                                    <constraint firstItem="NlK-ec-amR" firstAttribute="top" secondItem="1pv-fM-F1g" secondAttribute="top" id="enS-mh-la8"/>
-                                    <constraint firstAttribute="trailing" secondItem="ab1-Hw-qqR" secondAttribute="trailing" id="lOU-9Y-NyK"/>
-                                    <constraint firstAttribute="bottom" secondItem="ab1-Hw-qqR" secondAttribute="bottom" constant="50" id="qa8-cw-LqL"/>
-                                    <constraint firstAttribute="trailing" secondItem="hcW-1u-Xdn" secondAttribute="trailing" constant="25" id="zqD-83-9zg"/>
-                                    <constraint firstAttribute="trailing" secondItem="Nia-dh-wRj" secondAttribute="trailing" constant="173" id="zvX-Xf-Ndj"/>
+                                    <constraint firstItem="hcW-1u-Xdn" firstAttribute="centerX" secondItem="1pv-fM-F1g" secondAttribute="centerX" id="4iq-ba-YGk"/>
+                                    <constraint firstAttribute="trailing" secondItem="NlK-ec-amR" secondAttribute="trailing" id="GaJ-pm-d6g"/>
+                                    <constraint firstItem="NlK-ec-amR" firstAttribute="top" secondItem="1pv-fM-F1g" secondAttribute="top" id="W3R-sz-M2u"/>
+                                    <constraint firstItem="hcW-1u-Xdn" firstAttribute="top" secondItem="NlK-ec-amR" secondAttribute="bottom" id="a4D-FM-hAx"/>
+                                    <constraint firstAttribute="trailing" secondItem="ab1-Hw-qqR" secondAttribute="trailing" id="dKh-0s-EMR"/>
+                                    <constraint firstItem="NlK-ec-amR" firstAttribute="leading" secondItem="1pv-fM-F1g" secondAttribute="leading" id="nYl-Aq-dkE"/>
+                                    <constraint firstAttribute="bottom" secondItem="ab1-Hw-qqR" secondAttribute="bottom" id="o2u-qI-VtE"/>
+                                    <constraint firstItem="mMo-TV-7zB" firstAttribute="centerY" secondItem="1pv-fM-F1g" secondAttribute="centerY" id="p1Y-0d-Ba7"/>
+                                    <constraint firstItem="ab1-Hw-qqR" firstAttribute="leading" secondItem="1pv-fM-F1g" secondAttribute="leading" id="twQ-0k-tKT"/>
+                                    <constraint firstItem="mMo-TV-7zB" firstAttribute="centerX" secondItem="1pv-fM-F1g" secondAttribute="centerX" id="wg0-qS-77A"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1pv-fM-F1g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Aew-hY-lS5"/>
-                            <constraint firstItem="1pv-fM-F1g" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Hvo-A9-y6l"/>
-                            <constraint firstItem="1pv-fM-F1g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LyU-ud-gE4"/>
-                            <constraint firstItem="1pv-fM-F1g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g3c-jZ-6OH"/>
+                            <constraint firstItem="1pv-fM-F1g" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Fr4-2D-gt2"/>
+                            <constraint firstItem="1pv-fM-F1g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Las-5E-BeD"/>
+                            <constraint firstItem="1pv-fM-F1g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i6f-Ek-kvf"/>
+                            <constraint firstItem="1pv-fM-F1g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ruu-VY-XXA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="courseImage" destination="Nia-dh-wRj" id="jR3-KN-MDE"/>
                         <outlet property="courseLabe" destination="9HO-NA-Rv5" id="V1Y-aO-emd"/>
                         <outlet property="currencyPicker" destination="ab1-Hw-qqR" id="G3A-Vo-ROO"/>
                         <outlet property="priceLabel" destination="hcW-1u-Xdn" id="3On-z0-bo2"/>
